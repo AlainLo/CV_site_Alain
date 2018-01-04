@@ -1,0 +1,414 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+    font-size: 2vw;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------- FIN DU RESET CSS ------------------*/
+
+@charset "utf-8"
+/* CSS Author : Alain Lortal */
+
+/*
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Faustina', serif;
+font-family: 'Exo', sans-serif;
+*/
+    
+body{
+    position: relative;
+}
+@media screen (min-width: 200px) & (max-width: 640px) {
+  }
+
+header{
+    width: auto;
+    height: auto;
+}
+.navbar{
+	background-color: rgba(0,0,0,1);
+    padding : 1em 1em 1em 1em;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: auto;
+    color: white;
+    width: 18%;
+    text-decoration: none;
+    z-index: 250;
+}
+
+.alfooter{
+    position: fixed;
+	background-color: rgba(0,0,0,1);
+    padding : 1em 1em 1em 1em;
+    bottom: 0px;
+    right: 0px;
+    width: 20%;
+    height: auto;
+    transform-origin: right 0px;
+    transform: rotate(8deg);
+    color: white;
+    box-sizing: border-box;
+    z-index: 250;
+    font: 1em "Fira sans", sans-serif;
+}
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .alfooter {
+      transform: none;
+      width: 100%;
+      margin:auto;
+      height: auto;
+      min-height: 5vh;
+     
+  }
+}
+
+/*-----pages-----*/
+
+.wallpaper{
+    display:block;
+    position: relative;
+    left: 0;
+    top:0;
+    background: url(../img/glassbackground.jpg) no-repeat center fixed; 
+    background-size: cover;
+    z-index: -100;
+}
+
+/*.contenu{
+    display:block;
+    position: relative;
+    background-blend-mode: screen;
+}*/
+
+.base{
+    position: relative;
+    background-blend-mode: screen;
+    height: auto;
+    width: auto;
+    transform-origin: 12vw;
+    transform: rotate(8deg);
+    height: 100%;
+    width: 100%;
+    transform-origin: 12vw;
+    transform: rotate(8deg);
+}
+@media screen and (min-width: 200px) and (max-width: 640px){.base
+ {
+    transform: none;
+      }
+}
+.page{
+    position: relative;
+    z-index: 1;
+    pointer-events:none;
+    margin: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+}
+
+.main{
+    position: absolute;
+    left:5vw;
+    top: 5vw;
+    width: 85%;
+    height:85%; 
+}
+
+
+.page .onglet, .page .main{
+    display: inline-block;
+    vertical-align: top;  
+    margin: 0;
+    padding: 0;
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.svg-content {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#page_8, #page_7, #page_6, #page_5, #page_4, #page_3, #page_2, #page_1, 
+{
+    right:0;
+    top: 0; 
+    margin:0;
+    padding: 0;
+    position: relative;
+}
+
+#page_0{
+    right:0;
+    top: 0; 
+    margin:0;
+    padding: 0;
+    z-index: 100;
+    position: relative;
+}
+    /*background: linear-gradient(228deg,#020202,rgba(0,0,0,0), #f2eff2);
+
+/*----- classes contenus div -----*/
+
+.svg-text{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font: 1em "Fira sans", sans-serif;
+}
+
+.svg-logo{
+    display: inline-block;
+    position: relative;
+   /*top: -130vw;
+    left: 0;
+    width: 70vw;*/
+    height: 120vw;
+    margin: 0;
+    padding: 0;
+}
+
+#page_7 .main .svg-text,
+#page_6 .main .svg-text,
+#page_5 .main .svg-text,
+#page_4 .main .svg-text,
+#page_3 .main .svg-text,
+#page_2 .main .svg-text
+{
+    top: -83vw;
+    left: 15.5vw;
+    width: 55vw;
+    height: 83vw;
+    padding: 2vw 2vw 2vw 2vw;
+    box-sizing: border-box;
+}
+
+#page_1 .main .svg-text{
+    top: -89vw;
+    left: 15.5vw;
+    width: 40vw;
+    height: 83vw;
+    padding: 2vw 2vw 2vw 2vw;
+    box-sizing: border-box;
+   
+}
+
+#page_1 .main .svg-logo{
+    top: -83vw;
+    left: 15.5vw;
+    width: 15vw;
+    height: 83vw;
+    padding: 2vw 2vw 2vw 2vw;
+    box-sizing: border-box;
+}
+
+.dates{
+    font-family: 'Kanit Sans', sans-serif;
+    font-size: 0.9em;
+    font-style: normal 800;
+}
+
+.titre{
+    font-family: 'Kanit Sans', sans-serif;
+    font-size: 1.2em;
+    font-style: normal 800;
+}
+
+.marge{
+    margin-left: 3em;
+}
+
+.soustitre{
+    font-family: 'Kanit Sans', sans-serif;
+    font-size: 0.9em;
+    font-style: italic 700;
+}
+
+.description{
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 0.9em;
+    font-style: normal 200;
+}
+
+.reseau{
+    display: inline-block;
+    position: relative;
+    top: 0vw;
+    left: 5vw;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.container img{
+    height: 7vh; 
+    width: 13.5vw; 
+    border-radius: 1%;
+    
+}
+
+input, textarea{
+    left: 12vw;
+}
+
+.active{
+  z-index: 250;
+}
+
+/*-----div et sous-éléments div onglets-----*/
+
+.onglet{ 
+    width: 7vw;
+    height:3vw;
+    top:0;
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 16vw;
+    pointer-events: all;
+}
+
+.onglet p{
+    cursor: pointer;
+    font: 0.9em "Fira sans", sans-serif;
+}
+
+#page_7 .onglet, #page_6 .onglet,
+#page_5 .onglet,
+#page_4 .onglet,
+#page_3 .onglet,
+#page_2 .onglet,
+#page_1 .onglet{
+    font-size: 0.8em;
+}
+
+#page_7 .onglet{
+    top: 57.5vw;
+    z-index: 300;
+}
+
+#page_6 .onglet{
+    top: 49vw;
+    z-index: 300;
+}
+
+#page_5 .onglet{
+    top: 41.75vw;
+    z-index: 300;
+}
+
+#page_4 .onglet{
+    top: 33.25vw;
+    z-index: 300;
+    letter-spacing:-0.05em;
+}
+
+#page_3 .onglet{
+    top: 24.75vw;
+    z-index: 300;
+    letter-spacing:-0.05em; 
+}
+
+#page_2 .onglet{
+    top: 16.5vw;
+    z-index: 300;
+    letter-spacing: -0.07em; 
+}
+
+#page_1 .onglet{
+    top: 7.5vw;
+    z-index: 300;
+}
+
+h2 p{
+    font: 2em "Fira sans", sans-serif;
+    text-align: center;
+}
+
+/*
+#page_1 .onglet, #page_1 .main{
+  background: purple;
+
+}
+#page_2 .onglet, #page_2 .main{
+  background: red;
+}
+
+#page_3 .onglet, #page_3 .main{
+  background: yellow;
+}
+#page_4 .onglet, #page_4 .main{
+  background: blue;
+}
+#page_5 .onglet, #page_5 .main{
+  background: green;
+}
+#page_6.onglet, #page_6 .main{
+  background: orange;
+}
+#page_7.onglet, #page_7 .main{
+  background: grey;
+}
+#page_8.onglet, #page_8 .main{
+  background: purple;
+}
+*/
+
