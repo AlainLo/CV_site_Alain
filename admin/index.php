@@ -48,91 +48,91 @@ require 'connexion.php';
     <!--nav en include -->
     <?php include('inc/navbar.php');?>
         <section>
-          <div class="container">
+            <div class="container">
             <h1>Admin du site cv d'<?php echo($ligne_utilisateur['prenom'].' '.$ligne_utilisateur['nom']); ?></h1>
-            <h2>accueil Admin</h2>
-            <div class="row">
-                <div class="col-md-8">
-                    <table class="table  table-hover table-condensed">
-                    <h3>compétences acquises</h3>
-                        <th> compétences </th><th> Niveau (en %) </th><th> suppression </th><th> modification </th>
-                        <tr class="info">
-                            <td> Photoshop </td>
-                            <td> 40 </td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td></tr>
+                <h2>accueil Admin</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                        <table class="table  table-hover table-condensed">
+                        <h3>compétences acquises</h3>
+                            <th> compétences </th><th> Niveau (en %) </th><th> suppression </th><th> modification </th>
+                            <tr class="info">
+                                <td> Photoshop </td>
+                                <td> 40 </td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td></tr>
 
-                        <tr class="warning">
-                            <td> PHP </td>
-                            <td> 10 </td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
-                        </tr>
+                            <tr class="warning">
+                                <td> PHP </td>
+                                <td> 10 </td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
+                            </tr>
 
-                        <tr class="success">
-                            <td>Javascript</td>
-                            <td>0</td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
-                        </tr>
+                            <tr class="success">
+                                <td>Javascript</td>
+                                <td>0</td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
+                            </tr>
 
-                        <tr class="active">
-                            <td>HTML5</td>
-                            <td>30</td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
-                        </tr>
+                            <tr class="active">
+                                <td>HTML5</td>
+                                <td>30</td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></td>
+                            </tr>
 
-                        <tr class="bg-primary">
-                            <td>CSS3</td>
-                            <td>30</td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash">
-                            </span></button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
-                            </button></td>
-                        </tr>
+                            <tr class="bg-primary">
+                                <td>CSS3</td>
+                                <td>30</td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash">
+                                </span></button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
+                                </button></td>
+                            </tr>
 
-                        <tr class="warning">
-                            <td>JQuery</td>
-                            <td>10</td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>
-                            </button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
-                            </button></td>
-                        </tr>
+                            <tr class="warning">
+                                <td>JQuery</td>
+                                <td>10</td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>
+                                </button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
+                                </button></td>
+                            </tr>
 
-                        <tr class="danger">
-                            <td>SEO</td>
-                            <td>33</td>
-                            <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>
-                            </button></td>
-                            <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
-                            </button></td>
-                        </tr>
-                    </table>
+                            <tr class="danger">
+                                <td>SEO</td>
+                                <td>33</td>
+                                <td><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span>
+                                </button></td>
+                                <td><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span>
+                                </button></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3>Insertion d'une compétence</h3>
+                        <form class="form-control">
+                            <div class="form-group">
+                                <label>ajouter une compétence</label>
+                                <input type="text" placeholder=" ajouter une compétence">
+                            </div>
+
+                            <div class="form-group">
+                                <label>ajouter le niveau</label>
+                                <input type = "text" placeholder=" ajouter un niveau" class="box-shadow">
+                            </div>
+
+                            <div class="form-group">
+                                <button type= "button" class="btn btn-success btn-xs">Valider</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
-                <div class="col-md-4">
-                    <h3>Insertion d'une compétence</h3>
-                    <form="form-control">
-                        <div class="form-group">
-                            <label>ajouter une compétence</label>
-                            <input type = "text" placeholder=" ajouter une compétence"></input>
-                        </div>
-
-                        <div class="form-group">
-                            <label>ajouter le niveau</label>
-                            <input type = "text" placeholder=" ajouter un niveau" class="box-shadow"></input>
-                        </div>
-
-                        <div class="form-group">
-                            <button type= "button" class="btn btn-success btn-xs">Valider</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-                <p>texte</p>
-                <hr>
+                    <p>texte</p>
+                    <hr>
                 <?php
                       $sql = $pdoCV->query("SELECT * FROM t_competences");
                       $ligne_competence = $sql->fetch();
@@ -147,6 +147,6 @@ require 'connexion.php';
        <!--footer en include -->
     <?php include('inc/footer.php');?>   
 
-</body>
+    </body>
 </html>
 

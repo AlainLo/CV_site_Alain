@@ -81,6 +81,7 @@ header{
     width: 18%;
     text-decoration: none;
     z-index: 250;
+    font: 1em "Fira sans", sans-serif;
 }
 
 .alfooter{
@@ -295,8 +296,8 @@ header{
     position: relative;
     top: 0vw;
     left: 5vw;
-    width: 1.2em;
-    height: 1.2em;
+    width: 0.75rem;
+    height: 0.75rem;
 }
 
 .container img{

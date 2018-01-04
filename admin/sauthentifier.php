@@ -39,6 +39,7 @@ if(isset($_POST['connexion'])){// on envoie le form avec le name du button(on a 
 	}//fermeture du else
 }// ferme le isset
 
+require '../navbar.php'; 
 
 ?>
 

@@ -2,7 +2,7 @@
 ?>
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="utilisateur.php">Utilisateur<span>(current)</span></a></li>
+                    <li><a href="../index.php">Accueil</a></li>
+                    <li><a href="../admin/index.php">Administrateur</a></li>
                 </ul>
             </nav>

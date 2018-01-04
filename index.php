@@ -307,6 +307,13 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 </p>
                             
                     </div>
+                    <div class="svg-text">
+                            
+                                <p>
+                                    <
+                                </p>
+                            
+                    </div>
                 </div> 
                 <div id="a-propos" class="onglet">
                         <p>à propos</p>
