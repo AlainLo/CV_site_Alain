@@ -227,6 +227,16 @@ header{
     height: 120vw;
     margin: 0;
     padding: 0;
+    
+}
+
+.svg-download{
+    display: inline-block;
+    position: relative;
+    height: 15vw;
+    margin: 0;
+    padding: 0;
+    color: black;
 }
 
 #page_7 .main .svg-text,

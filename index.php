@@ -307,10 +307,10 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 </p>
                             
                     </div>
-                    <div class="svg-text">
+                    <div class="svg-download">
                             
                                 <p>
-                                    <
+                                    <a href="telechargements/webcv.pdf">Téléchargez le CV en version papier</a>
                                 </p>
                             
                     </div>
