@@ -16,7 +16,7 @@ fonctionnalités de la classe voiture comme 'freiner' et 'accélerer'
     private $co_message;
      
      // fonction d'insertion en BDD
-    public function insertContact($co_nom, $co_email, $co_sujet, $co_message) {
+    public function insertContact($bdd, $nom, $email, $sujet, $message) {
     	// on récupère les données rentrées par l'utilisateur
         $this->co_nom = strip_tags($nom);
 		$this->co_email = strip_tags($email);
@@ -24,18 +24,18 @@ fonctionnalités de la classe voiture comme 'freiner' et 'accélerer'
         $this->co_message = strip_tags($message);
         
         //require('admin/connexion.php');//on a besoin de se connecter maintenant
-        //ou : require('connexion.php');
+        require('connexion.php');
         
         // on crée une requête puis on l'exécute
-        $requete = $pdoCV->prepare("INSERT INTO t_contacts (co_nom, co_email, co_sujet, co_message) VALUES (:co_nom, :co_email, :co_sujet, :co_message)");
+        $requete = $bdd->prepare("INSERT INTO t_contacts (co_nom, co_email, co_sujet, co_message) VALUES (:co_nom, :co_email, :co_sujet, :co_message)");
         $requete->execute([
-        	':co_nom'	=> $this->nom, // on attribue à la variable co_nom la valeur de l'objet en cours d'instanciation, le nom de l'auteur du message qui vient d'être posté.
-            ':co_email' => $this->email,
-            ':co_sujet' => $this->sujet,
-            ':co_message' => $this->message]);
-        echo 'bonjour';
+        	':co_nom'	=> $this->co_nom, // on attribue à la variable co_nom la valeur de l'objet en cours d'instanciation, le nom de l'auteur du message qui vient d'être posté.
+            ':co_email' => $this->co_email,
+            ':co_sujet' => $this->co_sujet,
+            ':co_message' => $this->co_message]);
+        //echo 'bonjour';
         // on ferme la requête pour protéger des injections
-        $req->closeCursor();
+        $requete->closeCursor();
     } 
  }
 

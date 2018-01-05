@@ -51,7 +51,7 @@ if (!empty($_POST)) {
                 <div class="card-body"> 
                     <div class="row">
                         <div class="col-md-4">
-                            <img src="grass.jpg" alt="photo de nature" style="height: 71vh; width: 27vw; border-radius: 1%">
+                            <img src="../img/imgcode.jpg" alt="code" >
                         </div>
                         <div class="col-md-6 offset-2">
                            <h2 id="contact"> <p>Contactez-moi </p></h2>
@@ -75,7 +75,7 @@ if (!empty($_POST)) {
                                 <div class="form-group">
                                     <label for="message">Message :</label>
                                         <span class="error"><?php if (isset($erreurmessage)) echo $erreurmessage; ?></span>
-                                    <textarea class="form-control" name="co_message" cols="30" rows="10"><?php if (isset($co_message)) echo $co_message; ?></textarea>
+                                    <textarea class="form-control" name="co_message"><?php if (isset($co_message)) echo $co_message; ?></textarea>
                                 </div>
 
                                 <input type="submit" class="btn btn-outline-info btn-block btnsubmit" value="Envoyer" />
