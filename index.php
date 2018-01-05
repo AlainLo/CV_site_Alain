@@ -285,7 +285,6 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 </p>
                             
                     </div>
-                    
                     <div class="svg-logo">
                             <p>
                                 <?php foreach($ligne_reseaux as $ligne_reseau) : ?>
@@ -296,7 +295,7 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 <?php endforeach; ?>
                             </p>
                     </div>
-                    <div class="svg-text">
+                    <div class="svg-accroche">
                             
                                 <p>
                                     <?php foreach($ligne_titre_cv as $key => $value) : ?>

@@ -23,12 +23,12 @@ if(isset($_POST['titre_cv'])) {// par le nom du premier input
 	$logo = addslashes($_POST['logo']);
 	$id_titre_cv = $_POST['id_titre_cv'];
 	
-	$pdoCV->exec(" UPDATE t_titre_cv SET titre_cv='$titre_cv', accroche='$accroche', logo='$logo' WHERE id_titre-cv='$id_titre_cv' ");
+	$pdoCV->exec(" UPDATE t_titre_cv SET titre_cv='$titre_cv', accroche='$accroche', logo='$logo' WHERE id_titre_cv='$id_titre_cv' ");
 	header('location: titre.php');
 	exit();
 }
 
-//je récupère l'expérience'
+//je récupère le titre
 $id_titre_cv = $_GET['id_titre_cv'];// par l'id et $_GET
 $sql = $pdoCV->query(" SELECT * FROM t_titre_cv WHERE id_titre_cv='$id_titre_cv' "); // la requête est égale à l'id
 $ligne_titre_cv = $sql->fetch();

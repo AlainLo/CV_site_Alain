@@ -172,6 +172,7 @@ header{
     padding: 0;
 }
 
+
 .svg-container {
     display: inline-block;
     position: relative;
@@ -229,6 +230,12 @@ header{
     padding: 0;
     
 }
+.svg-accroche{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font: 1em "Fira sans", sans-serif;
+}
 
 .svg-download{
     display: inline-block;
@@ -255,20 +262,41 @@ header{
 }
 
 #page_1 .main .svg-text{
-    top: -89vw;
+    top: -85vw;
     left: 15.5vw;
     width: 40vw;
-    height: 83vw;
+    height: 20vw;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
-   
 }
 
 #page_1 .main .svg-logo{
     top: -83vw;
     left: 15.5vw;
     width: 15vw;
-    height: 83vw;
+    height: 20vw;
+    padding: 2vw 2vw 2vw 2vw;
+    box-sizing: border-box;
+}
+
+#page_1 .main .svg-download{
+    top: -85vw;
+    left: 15.5vw;
+    width: 56vw;
+    height: 10vw;
+    padding: 2vw 2vw 2vw 2vw;
+    text-decoration: none;
+    text-align: center;
+    font: 1em "Fira sans", sans-serif;
+    color: black;
+    box-sizing: border-box;
+}
+
+#page_1 .main .svg-accroche{
+    top: -85vw;
+    left: 15.5vw;
+    width: 56vw;
+    height: 30vw;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
 }
