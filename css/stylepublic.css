@@ -235,6 +235,7 @@ header{
     position: relative;
     margin: 0;
     font: 1em "Fira sans", sans-serif;
+    pointer-events:all;
 }
 
 .svg-download{
@@ -268,6 +269,7 @@ header{
     height: 20vw;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
+    pointer-events: all;
 }
 
 #page_1 .main .svg-logo{
@@ -277,6 +279,7 @@ header{
     height: 20vw;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
+    pointer-events: all;
 }
 
 #page_1 .main .svg-download{
@@ -290,6 +293,7 @@ header{
     font: 1em "Fira sans", sans-serif;
     color: black;
     box-sizing: border-box;
+    pointer-events: all;
 }
 
 #page_1 .main .svg-accroche{
@@ -299,6 +303,7 @@ header{
     height: 30vw;
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
+    pointer-events: all;
 }
 
 .dates{
@@ -359,6 +364,22 @@ input, textarea{
  border-radius: 0.5em;
  pointer-events: all;
  }
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .page_7 form {
+      padding;1.5vw;
+      width:45vw;
+      height: auto;
+  }
+    .page_7 form textarea[name=co_message]{
+{
+ resize : both;
+ min-width : 100px;
+ min-height : 100px;
+ max-width : 200px;
+ max-height : 200px;
+}
+    }
+}
 
 
 

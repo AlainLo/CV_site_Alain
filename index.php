@@ -1,11 +1,11 @@
 <?php
 require'connexion.php';
 
-$sql = $pdoCV->query(" SELECT * FROM t_titre_cv WHERE utilisateur_id ='1'"); 
+$sql = $pdoCV->query(" SELECT logo, titre_cv, accroche FROM t_titre_cv WHERE utilisateur_id ='1'"); 
 //ORDER BY id_titre_cv DESC LIMIT 1
-$ligne_titre_cv = $sql->fetch();
+$ligne_titre_cv = $sql->fetch(PDO::FETCH_ASSOC);
 
-$sql = $pdoCV->query(" SELECT prenom, nom, email, ville, commentaires  FROM t_utilisateurs WHERE id_utilisateur ='1'");
+$sql = $pdoCV->query(" SELECT prenom, nom, adresse, code_postal, email, site_web, telephone FROM t_utilisateurs WHERE id_utilisateur ='1'");
 $ligne_utilisateurs = $sql->fetch(PDO::FETCH_ASSOC);
 
 $sql = $pdoCV->query(" SELECT * FROM t_competences WHERE utilisateur_id ='1'");
@@ -113,7 +113,7 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                                    
                                                         <label for="message"> Message : </label>
                                                             <span ><?php if (isset($erreurmessage)) echo $erreurmessage; ?></span>
-                                                        <textarea name="co_message" cols="30" rows="10"><?php if (isset($co_message)) echo $co_message; ?></textarea><br>
+                                                        <textarea name="co_message" cols="30" rows="5"><?php if (isset($co_message)) echo $co_message; ?></textarea><br>
                                                     </div>
                                                     <div>
                                                         <input type="submit" value="Envoyer" />

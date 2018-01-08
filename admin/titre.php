@@ -45,10 +45,10 @@ header("location: titre.php"); // pour revenir sur la page
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<?php 
-		$sql = $pdoCV -> query("SELECT * FROM t_titre_cv WHERE id_titre_cv = '1' "); 
+		$sql = $pdoCV -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' "); 
 		$ligne_utilisateur = $sql -> fetch(PDO::FETCH_ASSOC); 
 	?>
-	<title> Admin : <?= $ligne_titre_cv['prenom']; ?> <?= $ligne_titre_cv['nom']; ?></title>
+	<title> Admin : <?= $ligne_utilisateur['prenom']; ?> <?= $ligne_utilisateur['nom']; ?></title>
 	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<!--personal css-->
@@ -89,7 +89,7 @@ header("location: titre.php"); // pour revenir sur la page
 							<td><?php echo $ligne_titre_cv['accroche']; ?></td>
 							<td><?php echo $ligne_titre_cv['logo']; ?></td>
 							<td><a href="titre.php?id_titre_cv=<?php echo $ligne_titre_cv['id_titre_cv']; ?> "><button type= "button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button></a></td>
-							<td><a href="modif_titre.php?id_experience=<?php echo $ligne_titre_cv['id_titre_cv']; ?> "><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></a></td>
+							<td><a href="modif_titre.php?id_titre_cv=<?php echo $ligne_titre_cv['id_titre_cv']; ?> "><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></a></td>
 							<td></td>
 						</tr>
 						<?php } ?>
@@ -107,7 +107,7 @@ header("location: titre.php"); // pour revenir sur la page
                                 </div>
 							
 							    <div class="form-group">
-									   <label for="soustitre">Accroche</label>
+									   <label for="accroche">Accroche</label>
 									   <input type="text" name="accroche" id="accroche" placeholder="Insérer une accroche" class="form-control">
 							    </div>
 
