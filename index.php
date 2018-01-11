@@ -256,7 +256,7 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                     <div class="svg-logo">
                         <p>
                             <?php foreach($ligne_reseaux as $ligne_reseau) : ?>
-                                <span class="reseau"><a href="<?= $ligne_reseau['rs_lien']; ?>"><img src="<?= $ligne_reseau['rs_logo']; ?>"></a></span><br>
+                                <span class="reseau"><a href="https://www.linkedin.com/in/alain-lortal-aa536957/" target="_blank"><img src="<?= $ligne_reseau['rs_logo']; ?>"></a></span><br>
                                 <br>
                             <?php endforeach; ?>
                         </p>

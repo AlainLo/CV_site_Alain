@@ -41,19 +41,26 @@ $ligne_titre_cv = $sql->fetch();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<?php 
-		$sql = $pdoCV -> query("SELECT * FROM t_titre_cv WHERE id_utilisateur = '1' "); 
+		$sql = $pdoCV -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' "); 
 		$ligne_utilisateur = $sql-> fetch(); 
 	?>
 	<title> Admin : <?php echo $ligne_utilisateur['prenom']; ?></title>
-    <!--CKEditor-->
+  
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--personal css-->
+	<link href="css/styleadmin.css" rel="stylesheet">
+     <!--CKEditor-->
     <script src="https://cdn.ckeditor.com/4.7.3/standard/ckeditor.js"></script>
+		
 </head>
 	<body>
+        <!--nav en include -->
+		<?php include('inc/navbar.php');?>
 		<h2>Modification d'un titre </h2>
 		<!-- <?php echo $ligne_titre_cv['t_titre_cv']; ?> -->
-		<form action="modif_titre_cv.php" method="post">
+		<form action="modif_titre.php" method="post">
 			<label for="titre_cv">Titre</label>
-			<input type="text" name="titre" value="<?php echo $ligne_titre_cv['titre']; ?>">
+			<input type="text" name="titre_cv" value="<?php echo $ligne_titre_cv['titre_cv']; ?>">
 			<label for="accroche">Accroche</label>
             <textarea name="accroche"  class="form-control" id="editor1">
                 <?php echo $ligne_titre_cv['accroche']; ?></textarea>
@@ -65,6 +72,11 @@ $ligne_titre_cv = $sql->fetch();
 			<input hidden name="id_titre_cv" value="<?php echo $ligne_titre_cv['id_titre_cv']; ?>">
 			<input type="submit" value="Mettre à jour">
 		</form>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+		<?php include('inc/footer.php');?>   
 	</body>
 </html>
 
