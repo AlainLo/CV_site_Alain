@@ -46,7 +46,7 @@ header("location: titre.php"); // pour revenir sur la page
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<?php 
 		$sql = $pdoCV -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' "); 
-		$ligne_utilisateur = $sql->fetch(); 
+		$ligne_utilisateur = $sql -> fetch(PDO::FETCH_ASSOC); 
 	?>
 	<title> Admin : <?= $ligne_utilisateur['prenom']; ?> <?= $ligne_utilisateur['nom']; ?></title>
 	<!-- Bootstrap -->
@@ -73,7 +73,7 @@ header("location: titre.php"); // pour revenir sur la page
 					//$ligne_experience = $sql->fetch();
 			?>
 			<div class="row">
-				<h2> il y a <?php echo $nbr_titre_cv; ?> titres </h2>
+				<h2> il y a <?php echo $nbr_titre; ?> titres </h2>
 			    <div class="col-md-8">
 					<table class="table  table-hover  table-condensed">
 						<tr>
@@ -83,8 +83,8 @@ header("location: titre.php"); // pour revenir sur la page
 							<th>Supression</th>
 							<th>Modification</th>
 						</tr>
-                        <?php while ($ligne_titre_cv = $sql->fetch()){ ?>
 						<tr>
+							<?php while ($ligne_titre_cv = $sql->fetch()){ ?>
 							<td><?php echo $ligne_titre_cv['titre_cv']; ?></td>
 							<td><?php echo $ligne_titre_cv['accroche']; ?></td>
 							<td><?php echo $ligne_titre_cv['logo']; ?></td>
@@ -92,7 +92,7 @@ header("location: titre.php"); // pour revenir sur la page
 							<td><a href="modif_titre.php?id_titre_cv=<?php echo $ligne_titre_cv['id_titre_cv']; ?> "><button type= "button" class="btn btn-success"><span class="glyphicon glyphicon-edit"></span></button></a></td>
 							<td></td>
 						</tr>
-                          <?php } ?>
+						<?php } ?>
 					</table>
 				</div>
 				<div class="col-md-4">
@@ -102,8 +102,8 @@ header("location: titre.php"); // pour revenir sur la page
 						<hr>
                             <form action="titre.php" method="post">
                                 <div class="form-group">
-									<label for="titre_cv">Titre</label>
-									<input type="text" name="titre_cv" id="titre_cv" placeholder="Insérer un titre" class="form-control">
+									<label for="titre">Titre</label>
+									<input type="text" name="titre" id="titre" placeholder="Insérer un titre" class="form-control">
                                 </div>
 							
 							    <div class="form-group">

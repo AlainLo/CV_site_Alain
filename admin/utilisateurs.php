@@ -67,7 +67,7 @@ header("location: utilisateurs.php"); // pour revenir sur la page
 		$sql = $pdoCV -> query("SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1' "); 
 		$ligne_utilisateur = $sql -> fetch(PDO::FETCH_ASSOC); 
 	?>
-	<title> Admin : <?= $ligne_utilisateur['prenom']; ?> <?= $ligne_utilisateur['nom']; ?></title>
+	<title> Admin : <?= $ligne_utilisateur['prenom'].' '. $ligne_utilisateur['nom']; ?></title>
 	<!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<!--personal css-->
@@ -138,18 +138,23 @@ header("location: utilisateurs.php"); // pour revenir sur la page
 						<hr>
                             <form action="utilisateurs.php" method="post">
                                 <div class="form-group">
-									<label for="titre">Titre</label>
-									<input type="text" name="titre" id="titre" placeholder="Insérer un nom" class="form-control">
+									<label for="nom">Nom</label>
+									<input type="text" name="nom" id="nom" placeholder="Insérer un nom" class="form-control">
                                 </div>
 							
 							    <div class="form-group">
-									   <label for="soustitre">Sous-Titre</label>
-									   <input type="text" name="soustitre" id="prenom" placeholder="Insérer un prénom" class="form-control">
+									   <label for="prenom">Prénom</label>
+									   <input type="text" name="prenom" id="prenom" placeholder="Insérer un prénom" class="form-control">
 							    </div>
 
 							    <div class="form-group">
-									<label for="dates">Age</label>
-									<input type="text" name="age" id="age" placeholder="Insérer des dates" class="form-control">
+									<label for="age">Age</label>
+									<input type="text" name="age" id="age" placeholder="Insérer un âge" class="form-control">
+							    </div>
+                                
+                                <div class="form-group">
+									<label for="sexe">Sexe</label>
+									<input type="text" name="sexe" id="sexe" placeholder="Insérer le sexe" class="form-control">
 							    </div>
 
 							    <div class="form-group">

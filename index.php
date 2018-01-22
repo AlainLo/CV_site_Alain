@@ -37,11 +37,23 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="Alain LORTAL, développeur-intégrateur web, CV">
+        <meta name="author" content="Alain LORTAL">
 		
 		<!--personal css-->
 		<link href="css/stylepublic.css" rel="stylesheet">
         <!-- fonts for this site-->
-        <link href="https://fonts.googleapis.com/css?family=Exo|Alegreya+Sans|Fira+Sans|Kanit+Sans:300,400,700,800" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Exo|Alegreya+Sans|Fira+Sans|Kanit+Sans:300,400,700,800" rel="stylesheet" type="text/css"> 
+        
+        <!-- extrait de code pour gérer les favicons : -->
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" href="img/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="img/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="img/favicons/manifest.json">
+        <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="msapplication-TileColor" content="#00a8ff">
+        <meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	</head>
    
 	<body class="wallpaper">
@@ -97,7 +109,7 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                                             <div>
                                                 <h2> <p>Contactez-moi </p></h2>
 
-                                                <form action=index.php method="POST">
+                                                <form action="#" method="POST">
                                                     <div>
                                                         <label for="nom"> Nom : </label>
                                                             <span class="error"><?php if (isset($erreurnom)) echo $erreurnom; ?></span>
@@ -256,7 +268,7 @@ $ligne_loisirs = $sql->fetchAll(PDO::FETCH_ASSOC);
                     <div class="svg-logo">
                         <p>
                             <?php foreach($ligne_reseaux as $ligne_reseau) : ?>
-                                <span class="reseau"><a href="https://www.linkedin.com/in/alain-lortal-aa536957/" target="_blank"><img src="<?= $ligne_reseau['rs_logo']; ?>"></a></span><br>
+                                <span class="reseau"><a href="<?= $ligne_reseau['rs_lien']; ?>"><img src="<?= $ligne_reseau['rs_logo']; ?>"></a></span><br>
                                 <br>
                             <?php endforeach; ?>
                         </p>
