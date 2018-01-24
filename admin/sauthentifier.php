@@ -49,7 +49,7 @@ require '../navbar.php';
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title="Authentification : admin">
+        <title>Authentification admin</title>
 		<!-- Bootstrap -->
 	    <link href="css/bootstrap.min.css" rel="stylesheet">
 		<!--personal css-->
@@ -58,7 +58,7 @@ require '../navbar.php';
 	<body>
 		<div class="container">
 			<div clas="row">
-				<div class="col-md-4">
+				<div class="col-md-6">
 						<h1>Admin : s'authentifier</h1>
 						<hr>
 						<table class="table  table-hover table-condensed">

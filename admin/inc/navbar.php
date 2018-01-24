@@ -15,8 +15,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-         <li><a href="#">Accueil</a></li>
-         <li class="active"><a href="utilisateur.php">Utilisateur<span class="sr-only">(current)</span></a></li>
+         <li><a href="../index.php">Accueil</a></li>
+         <li class="active"><a href="utilisateurs.php">Utilisateur<span class="sr-only">(current)</span></a></li>
        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Parcours <span class="caret"></span></a>
@@ -24,7 +24,7 @@
             <li><a href="titre.php">Titre</a></li>
             <li><a href="realisations.php">Réalisations</a></li>
             <li><a href="experiences.php">Expériences</a></li>
-            <li><a href="Formations.php">Formations</a></li>
+            <li><a href="formations.php">Formations</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="competences.php">Compétences</a></li>
             <li><a href="plus.php">Plus</a></li>

@@ -70,18 +70,30 @@ header{
     width: auto;
     height: auto;
 }
+
+h1{
+    font-size: 0.6em;
+    color: rgba(220,220, 220, 0.8);
+}
 .navbar{
-	background-color: rgba(0,0,0,1);
-    padding : 1em 1em 1em 1em;
+	background-color: rgba(47,79,79,0.8);
+    padding : 0.5em 0.5em 0.5em 0.5em;
     top: 0;
     left: 0;
     position: fixed;
-    height: auto;
-    color: white;
-    width: 18%;
-    text-decoration: none;
+    height: 3.5em;
+    border-radius: 100%;
+    width: 8%;
     z-index: 250;
     font: 1em "Fira sans", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3em;
+    color: white;
+}
+
+.navbar ul li a:link{
+    text-decoration: none;
 }
 
 .alfooter{
@@ -97,8 +109,10 @@ header{
     color: white;
     box-sizing: border-box;
     z-index: 250;
-    font: 1em "Fira sans", sans-serif;
+    font: 0.8em "Fira sans", sans-serif;
 }
+    
+
 @media screen and (min-width: 200px) and (max-width: 640px) {
   .alfooter {
       transform: none;
@@ -108,6 +122,22 @@ header{
       min-height: 5vh;
      
   }
+}
+
+.alfooter ul li{
+    font-size: 0.8em;
+}
+
+.alfooter div p{
+    
+    font-size: 0.8em;
+}
+
+.alfooter div a:link{
+    text-decoration: none;
+}
+bold{
+    
 }
 
 /*-----pages-----*/
@@ -122,6 +152,20 @@ header{
     z-index: -100;
 }
 
+.fondpage{
+    display: block;
+    width: 85%;
+    height: auto;
+    top: 5em;
+    left: 5em;
+    padding: 2em 2em 2em 6em;
+    background: rgba(248,248,255, 0.75);
+    transform-origin: 12vw;
+    transform: rotate(8deg);
+}
+.fondpage p{
+    margin: 1em;
+}
 /*.contenu{
     display:block;
     position: relative;
@@ -134,7 +178,7 @@ header{
     height: auto;
     width: auto;
     transform-origin: 12vw;
-    transform: rotate(8deg);
+    transform: rotate(6deg);
     height: 100%;
     width: 100%;
     transform-origin: 12vw;
@@ -191,7 +235,7 @@ header{
     height: 100%;
 }
 
-#page_8, #page_7, #page_6, #page_5, #page_4, #page_3, #page_2, #page_1, 
+#page_8 #page_7 #page_6 #page_5 #page_4 #page_3 #page_2 #page_1
 {
     right:0;
     top: 0; 
@@ -261,6 +305,9 @@ header{
     padding: 2vw 2vw 2vw 2vw;
     box-sizing: border-box;
 }
+#page_7 .main .svg-text .container div div div div form div input{
+    pointer-events: all;
+}
 
 #page_1 .main .svg-text{
     top: -85vw;
@@ -271,6 +318,10 @@ header{
     box-sizing: border-box;
     pointer-events: all;
 }
+
+/*.svg-text > :last-child{
+    color: white;
+}*/
 
 #page_1 .main .svg-logo{
     top: -83vw;
@@ -291,7 +342,7 @@ header{
     text-decoration: none;
     text-align: center;
     font: 1em "Fira sans", sans-serif;
-    color: black;
+    color: rgba(0,0,0,0.9);
     box-sizing: border-box;
     pointer-events: all;
 }
@@ -332,6 +383,7 @@ header{
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 0.9em;
     font-style: normal 200;
+    pointer-events: all;
 }
 
 .reseau{
@@ -348,6 +400,10 @@ header{
     width: 13.5vw; 
     border-radius: 1%;
 }
+
+.col-md-6 h1{
+    background-color: white;
+}
 /*-----formulaire et éléments-----*/
 input, textarea{
     left: 12vw;
@@ -359,24 +415,24 @@ input, textarea{
 
 #page_7 form {
  background-color:#FAFAFA;
- padding:2vw;
- width:47vw;
+ padding: 2vw;
+ width: 47vw;
  border-radius: 0.5em;
  pointer-events: all;
  }
 @media screen and (min-width: 200px) and (max-width: 640px) {
   .page_7 form {
-      padding;1.5vw;
-      width:45vw;
+      padding: 1.5vw;
+      width: 45vw;
       height: auto;
   }
     .page_7 form textarea[name=co_message]{
 {
- resize : both;
- min-width : 100px;
- min-height : 100px;
- max-width : 200px;
- max-height : 200px;
+ resize: both;
+ min-width: 100px;
+ min-height: 100px;
+ max-width: 200px;
+ max-height: 200px;
 }
     }
 }

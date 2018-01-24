@@ -1,9 +1,17 @@
  <footer class="alfooter">
  	<div>
+        <ul>
+            <li>
+                <a href="admin/index.php">Accès Administrateur</a>
+            </li>
+        </ul>
+    </div>
+    <div>
         <p>
-            informations légales
+            <a href="mentions_legales.php">mentions légales</a>
         </p>
     </div>
+    
     <div>
         <p>	
         &copy;
